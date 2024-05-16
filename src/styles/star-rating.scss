@@ -1,0 +1,36 @@
+.star-rating {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+.star {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: lightgrey;
+
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  &.partial {
+    background-image: linear-gradient(to right, #f8d24e 40%, lightgray 0%);
+  }
+}
+
+.star.filled {
+  background-color: #f8d24e; /* Change this color to your desired filled star color */
+}
+
+.star-rating p {
+  font-size: 20px;
+}
