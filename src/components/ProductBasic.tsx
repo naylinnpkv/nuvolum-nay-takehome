@@ -1,17 +1,18 @@
 "use client";
 import { IProducts } from "@/types";
 import Image from "next/image";
-import "../styles/item-basic.scss";
+import "../styles/product-basic.scss";
 import "../styles/product-detail.scss";
 import { useEffect, useState } from "react";
 import ProductDetail from "./ProductDetail";
 
-const ItemBasic: React.FC<{ products: IProducts[] }> = ({ products }) => {
+const ProductBasic: React.FC<{ products: IProducts[] }> = ({ products }) => {
   const [selectedProduct, setSelectedProduct] = useState<IProducts>(
     products[0]
   );
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
+  // handling responsive design
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -22,8 +23,6 @@ const ItemBasic: React.FC<{ products: IProducts[] }> = ({ products }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  const onSelect = (product: IProducts) => setSelectedProduct(product);
 
   return (
     <div className="products-container">
@@ -79,4 +78,4 @@ const ItemBasic: React.FC<{ products: IProducts[] }> = ({ products }) => {
   );
 };
 
-export default ItemBasic;
+export default ProductBasic;

@@ -10,7 +10,9 @@ const ProductDetail: React.FC<
       <p>${price}</p>
       <p className="product-description">{description}</p>
       <StarRating rating={rating} />
-      <button className="add-cart-button">Add to Cart</button>
+      <div className="add-cart">
+        <button className="add-cart-button">Add to Cart</button>
+      </div>
     </div>
   );
 };

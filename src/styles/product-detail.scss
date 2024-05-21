@@ -10,7 +10,12 @@
 .product-description {
   text-align: justify;
 }
-
+.add-cart {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .add-cart-button {
   color: white;
   background-color: rgb(8, 172, 172);

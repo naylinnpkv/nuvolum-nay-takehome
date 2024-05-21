@@ -16,6 +16,7 @@ const StarRating: React.FC<{ rating: { rate: number; count: number } }> = ({
     return arr;
   };
 
+  // for decimal ratings
   const renderPartialStar = () => (
     <span
       className="star"
@@ -32,6 +33,7 @@ const StarRating: React.FC<{ rating: { rate: number; count: number } }> = ({
     }
     return arr;
   };
+
   return (
     <div className="star-rating">
       <p>{rate}</p>
