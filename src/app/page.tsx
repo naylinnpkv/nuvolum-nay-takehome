@@ -1,5 +1,5 @@
 import { IProducts } from "@/types";
-import ItemBasic from "@/components/ProductBasic";
+import ProductBasic from "@/components/ProductBasic";
 
 async function getData(): Promise<IProducts[]> {
   const res = await fetch("https://fakestoreapi.com/products?limit=5");
@@ -15,7 +15,7 @@ export default async function Home() {
 
   return (
     <main>
-      <ItemBasic products={data} />
+      <ProductBasic products={data} />
     </main>
   );
 }
